@@ -1,4 +1,4 @@
-# Machine-Learning-Project
+# CPSC-5616 Machine Learning Project, Winter 2023
 Project aimed at recognizing emotions from facial expressions using Convolutional Neural Networks (CNNs).We are writing this to propose a 8-week project aimed at recognizing emotions from facial expressions using Convolutional Neural Networks (CNNs). The project aims to use deep learning techniques to develop a system that can accurately identify emotions such as happiness, sadness, and anger based on facial features.
 
 # Objectives:
