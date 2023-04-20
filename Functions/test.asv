@@ -1,0 +1,27 @@
+
+% Load sample grayscale image
+image = imread("Datasets");% Convert to grayscale if necessary
+if size(image, 3) == 3
+    image = rgb2gray(image);
+end
+% Resize image to 48x48
+image = imresize(image, [48, 48]);
+
+% Define a test kernel
+kernel = [0 1 0; 1 -4 1; 0 1 0];
+
+% Set the number of layers and filter size
+numLayers = 1;
+filterSize = 3;
+
+% Perform convolution on the image using the defined kernel, number of layers, and filter size
+convImage = convolve(image, kernel, numLayers, filterSize);
+
+% Display the original and convolved images side by side
+figure;
+subplot(1,2,1);
+imshow(image);
+title('Original Image');
+subplot(1,2,2);
+imshow(convImage);
+title('Convolved Image');

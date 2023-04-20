@@ -1,0 +1,17 @@
+ckplus_data = imageDatastore('Datasets/CK+', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
+DFH_data = imageDatastore('DFH_resized_grayscape', 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
+
+
+all_data = imageDatastore(cat(1, ckplus_data.Files, DFH_data.Files), 'LabelSource', 'foldernames');
+% all_data = shuffle(all_data);
+% %making split of [75% 15% 15%] = [Training validation testing]
+% [train_data, valtest_data] = splitEachLabel(all_data, 0.7, 'randomized');
+% [val_data, test_data] = splitEachLabel(valtest_data, 0.5, 'randomized');
+% 
+% % Display the number of images in each set
+% numTrain = numel(train_data.Labels);
+% numVal = numel(val_data.Labels);
+% numTest = numel(test_data.Labels);
+% save('train_data.mat', 'train_data');
+% save('val_data.mat', 'val_data');
+% save('test_data.mat', 'test_data');
